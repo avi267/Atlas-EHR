@@ -1,0 +1,1078 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "atlas-ehr-hld",
+  "elements": [
+
+    {
+      "type": "rectangle", "id": "title_box", "x": 80, "y": 20, "width": 2620, "height": 65,
+      "angle": 0, "strokeColor": "#1864ab", "backgroundColor": "#1864ab", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 101, "version": 1, "versionNonce": 1, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "title_text", "x": 80, "y": 28, "width": 2620, "height": 50,
+      "angle": 0, "strokeColor": "#ffffff", "backgroundColor": "transparent",
+      "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "Atlas-EHR — High-Level Architecture Design  |  Enterprise HealthTech Data Platform  |  Real-World Scalable Reference",
+      "fontSize": 22, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 18, "containerId": null, "originalText": "Atlas-EHR — High-Level Architecture Design  |  Enterprise HealthTech Data Platform  |  Real-World Scalable Reference",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 102, "version": 1, "versionNonce": 2, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "sec1_container", "x": 80, "y": 110, "width": 1680, "height": 165,
+      "angle": 0, "strokeColor": "#1971c2", "backgroundColor": "#dbe4ff", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 80,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 201, "version": 1, "versionNonce": 3, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "sec1_label", "x": 100, "y": 115, "width": 400, "height": 25,
+      "angle": 0, "strokeColor": "#1864ab", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "① DATA SOURCES", "fontSize": 14, "fontFamily": 1, "textAlign": "left",
+      "verticalAlign": "top", "baseline": 13, "containerId": null,
+      "originalText": "① DATA SOURCES",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 202, "version": 1, "versionNonce": 4, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "src_ehr", "x": 105, "y": 145, "width": 210, "height": 95,
+      "angle": 0, "strokeColor": "#1971c2", "backgroundColor": "#a5d8ff", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 211, "version": 1, "versionNonce": 5, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_src_ehr", "x": 105, "y": 155, "width": 210, "height": 75,
+      "angle": 0, "strokeColor": "#1864ab", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🏥 Hospital EHR\nEpic / Cerner\nHL7 FHIR R4",
+      "fontSize": 13, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 13, "containerId": null, "originalText": "🏥 Hospital EHR\nEpic / Cerner\nHL7 FHIR R4",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 212, "version": 1, "versionNonce": 6, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "src_pacs", "x": 335, "y": 145, "width": 210, "height": 95,
+      "angle": 0, "strokeColor": "#1971c2", "backgroundColor": "#a5d8ff", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 221, "version": 1, "versionNonce": 7, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_src_pacs", "x": 335, "y": 155, "width": 210, "height": 75,
+      "angle": 0, "strokeColor": "#1864ab", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🖼 PACS / DICOM\nRadiology Scans\nImaging Archive",
+      "fontSize": 13, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 13, "containerId": null, "originalText": "🖼 PACS / DICOM\nRadiology Scans\nImaging Archive",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 222, "version": 1, "versionNonce": 8, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "src_fax", "x": 565, "y": 145, "width": 210, "height": 95,
+      "angle": 0, "strokeColor": "#1971c2", "backgroundColor": "#a5d8ff", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 231, "version": 1, "versionNonce": 9, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_src_fax", "x": 565, "y": 155, "width": 210, "height": 75,
+      "angle": 0, "strokeColor": "#1864ab", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "📠 Paper / Fax\nScanned PDFs\nInk-degraded docs",
+      "fontSize": 13, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 13, "containerId": null, "originalText": "📠 Paper / Fax\nScanned PDFs\nInk-degraded docs",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 232, "version": 1, "versionNonce": 10, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "src_mobile", "x": 795, "y": 145, "width": 210, "height": 95,
+      "angle": 0, "strokeColor": "#1971c2", "backgroundColor": "#a5d8ff", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 241, "version": 1, "versionNonce": 11, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_src_mobile", "x": 795, "y": 155, "width": 210, "height": 75,
+      "angle": 0, "strokeColor": "#1864ab", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "📱 Mobile Health\nApps / Wearables\nPatient-reported",
+      "fontSize": 13, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 13, "containerId": null, "originalText": "📱 Mobile Health\nApps / Wearables\nPatient-reported",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 242, "version": 1, "versionNonce": 12, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "src_jp_hospital", "x": 1025, "y": 145, "width": 210, "height": 95,
+      "angle": 0, "strokeColor": "#1971c2", "backgroundColor": "#a5d8ff", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 251, "version": 1, "versionNonce": 13, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_src_jp", "x": 1025, "y": 155, "width": 210, "height": 75,
+      "angle": 0, "strokeColor": "#1864ab", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🇯🇵 JP Hospital HIS\nKatakana Records\nPMDA-format docs",
+      "fontSize": 13, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 13, "containerId": null, "originalText": "🇯🇵 JP Hospital HIS\nKatakana Records\nPMDA-format docs",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 252, "version": 1, "versionNonce": 14, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "src_cn_hospital", "x": 1255, "y": 145, "width": 210, "height": 95,
+      "angle": 0, "strokeColor": "#1971c2", "backgroundColor": "#a5d8ff", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 261, "version": 1, "versionNonce": 15, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_src_cn", "x": 1255, "y": 155, "width": 210, "height": 75,
+      "angle": 0, "strokeColor": "#1864ab", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🇨🇳 CN/KR Hospital\nHIS EHR Export\nWHO INN format",
+      "fontSize": 13, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 13, "containerId": null, "originalText": "🇨🇳 CN/KR Hospital\nHIS EHR Export\nWHO INN format",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 262, "version": 1, "versionNonce": 16, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "sec2_container", "x": 80, "y": 315, "width": 1680, "height": 175,
+      "angle": 0, "strokeColor": "#099268", "backgroundColor": "#c3fae8", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 80,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 301, "version": 1, "versionNonce": 17, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "sec2_label", "x": 100, "y": 320, "width": 600, "height": 25,
+      "angle": 0, "strokeColor": "#099268", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "② OCR PROCESSING LAYER  (Real-world: replaces MockOcrRegistry.java)",
+      "fontSize": 14, "fontFamily": 1, "textAlign": "left", "verticalAlign": "top",
+      "baseline": 13, "containerId": null, "originalText": "② OCR PROCESSING LAYER  (Real-world: replaces MockOcrRegistry.java)",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 302, "version": 1, "versionNonce": 18, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "ocr_textract", "x": 105, "y": 350, "width": 210, "height": 120,
+      "angle": 0, "strokeColor": "#099268", "backgroundColor": "#63e6be", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 311, "version": 1, "versionNonce": 19, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_ocr_textract", "x": 105, "y": 358, "width": 210, "height": 104,
+      "angle": 0, "strokeColor": "#1a4731", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "☁ AWS Textract\nAnalyzeDocument API\nWord-level confidence\nBounding box JSON",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "☁ AWS Textract\nAnalyzeDocument API\nWord-level confidence\nBounding box JSON",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 312, "version": 1, "versionNonce": 20, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "ocr_azure", "x": 335, "y": 350, "width": 220, "height": 120,
+      "angle": 0, "strokeColor": "#099268", "backgroundColor": "#63e6be", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 321, "version": 1, "versionNonce": 21, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_ocr_azure", "x": 335, "y": 358, "width": 220, "height": 104,
+      "angle": 0, "strokeColor": "#1a4731", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "☁ Azure Form Recognizer\nField-level confidence\ncontent_confidence\nfield_confidence split",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "☁ Azure Form Recognizer\nField-level confidence\ncontent_confidence\nfield_confidence split",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 322, "version": 1, "versionNonce": 22, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "ocr_google", "x": 575, "y": 350, "width": 210, "height": 120,
+      "angle": 0, "strokeColor": "#099268", "backgroundColor": "#63e6be", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 331, "version": 1, "versionNonce": 23, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_ocr_google", "x": 575, "y": 358, "width": 210, "height": 104,
+      "angle": 0, "strokeColor": "#1a4731", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "☁ Google Document AI\nLayout Parser\nTable detection\nMultilingual OCR",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "☁ Google Document AI\nLayout Parser\nTable detection\nMultilingual OCR",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 332, "version": 1, "versionNonce": 24, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "ocr_adapter", "x": 805, "y": 350, "width": 230, "height": 120,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "#d3f9d8", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "dashed", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 341, "version": 1, "versionNonce": 25, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_ocr_adapter", "x": 805, "y": 358, "width": 230, "height": 104,
+      "angle": 0, "strokeColor": "#1a4731", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "⚙ OCR Adapter / Normalizer\nComposite confidence scorer\nField-extraction mapper\n≡ MockOcrRegistry.java",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "⚙ OCR Adapter / Normalizer\nComposite confidence scorer\nField-extraction mapper\n≡ MockOcrRegistry.java",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 342, "version": 1, "versionNonce": 26, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "ocr_s3_raw", "x": 1060, "y": 350, "width": 210, "height": 120,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "#e5dbff", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 351, "version": 1, "versionNonce": 27, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_ocr_s3_raw", "x": 1060, "y": 358, "width": 210, "height": 104,
+      "angle": 0, "strokeColor": "#3b0764", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🗄 AWS S3\nRaw Scan Archive\nOriginal images + JSON\nAudit immutability",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "🗄 AWS S3\nRaw Scan Archive\nOriginal images + JSON\nAudit immutability",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 352, "version": 1, "versionNonce": 28, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "sec3_container", "x": 80, "y": 530, "width": 1680, "height": 105,
+      "angle": 0, "strokeColor": "#495057", "backgroundColor": "#dee2e6", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 80,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 401, "version": 1, "versionNonce": 29, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "sec3_label", "x": 100, "y": 535, "width": 400, "height": 20,
+      "angle": 0, "strokeColor": "#212529", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "③ API GATEWAY & LOAD BALANCING",
+      "fontSize": 14, "fontFamily": 1, "textAlign": "left", "verticalAlign": "top",
+      "baseline": 13, "containerId": null, "originalText": "③ API GATEWAY & LOAD BALANCING",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 402, "version": 1, "versionNonce": 30, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "gw_kong", "x": 160, "y": 558, "width": 280, "height": 62,
+      "angle": 0, "strokeColor": "#495057", "backgroundColor": "#adb5bd", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 411, "version": 1, "versionNonce": 31, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_gw_kong", "x": 160, "y": 562, "width": 280, "height": 54,
+      "angle": 0, "strokeColor": "#212529", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "Kong API Gateway\nTLS termination  |  JWT auth  |  Rate limiting",
+      "fontSize": 13, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 13, "containerId": null, "originalText": "Kong API Gateway\nTLS termination  |  JWT auth  |  Rate limiting",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 412, "version": 1, "versionNonce": 32, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "gw_lb", "x": 470, "y": 558, "width": 280, "height": 62,
+      "angle": 0, "strokeColor": "#495057", "backgroundColor": "#adb5bd", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 421, "version": 1, "versionNonce": 33, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_gw_lb", "x": 470, "y": 562, "width": 280, "height": 54,
+      "angle": 0, "strokeColor": "#212529", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "AWS ALB / NGINX\nRound-robin  |  Health checks  |  Blue-green",
+      "fontSize": 13, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 13, "containerId": null, "originalText": "AWS ALB / NGINX\nRound-robin  |  Health checks  |  Blue-green",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 422, "version": 1, "versionNonce": 34, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "gw_rbac", "x": 780, "y": 558, "width": 280, "height": 62,
+      "angle": 0, "strokeColor": "#495057", "backgroundColor": "#adb5bd", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 431, "version": 1, "versionNonce": 35, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_gw_rbac", "x": 780, "y": 562, "width": 280, "height": 54,
+      "angle": 0, "strokeColor": "#212529", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "OAuth2 / RBAC Enforcer\nHashiCorp Vault  |  mTLS  |  Audit",
+      "fontSize": 13, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 13, "containerId": null, "originalText": "OAuth2 / RBAC Enforcer\nHashiCorp Vault  |  mTLS  |  Audit",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 432, "version": 1, "versionNonce": 36, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "sec4_container", "x": 80, "y": 685, "width": 2200, "height": 210,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "#d3f9d8", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 75,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 501, "version": 1, "versionNonce": 37, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "sec4_label", "x": 100, "y": 690, "width": 900, "height": 22,
+      "angle": 0, "strokeColor": "#1a4731", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "④ CORE MICROSERVICES  ★ Current Atlas-EHR Codebase — each box maps 1:1 to a Java class ★",
+      "fontSize": 14, "fontFamily": 1, "textAlign": "left", "verticalAlign": "top",
+      "baseline": 13, "containerId": null, "originalText": "④ CORE MICROSERVICES  ★ Current Atlas-EHR Codebase — each box maps 1:1 to a Java class ★",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 502, "version": 1, "versionNonce": 38, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "svc_extraction", "x": 100, "y": 715, "width": 250, "height": 165,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "#69db7c", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 511, "version": 1, "versionNonce": 39, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_svc_extraction", "x": 100, "y": 718, "width": 250, "height": 159,
+      "angle": 0, "strokeColor": "#1a4731", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "OCR Extraction Svc\n─────────────────\nMockOcrRegistry.java\nProduces raw scan maps\nKey: ocr_confidence\nKey: drug_name\nKey: biomarker_egfr",
+      "fontSize": 12, "fontFamily": 3, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "OCR Extraction Svc\n─────────────────\nMockOcrRegistry.java\nProduces raw scan maps\nKey: ocr_confidence\nKey: drug_name\nKey: biomarker_egfr",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 512, "version": 1, "versionNonce": 40, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "svc_orchestrator", "x": 370, "y": 715, "width": 270, "height": 165,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "#69db7c", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 521, "version": 1, "versionNonce": 41, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_svc_orchestrator", "x": 370, "y": 718, "width": 270, "height": 159,
+      "angle": 0, "strokeColor": "#1a4731", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "Ingestion Orchestrator Svc\n─────────────────────────\nIngestionOrchestrator.java\nStrategy registry lookup\nStage 1: Extraction\nStage 2: Crosswalk\nStage 3: Drift Check",
+      "fontSize": 12, "fontFamily": 3, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "Ingestion Orchestrator Svc\n─────────────────────────\nIngestionOrchestrator.java\nStrategy registry lookup\nStage 1: Extraction\nStage 2: Crosswalk\nStage 3: Drift Check",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 522, "version": 1, "versionNonce": 42, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "svc_jp_trans", "x": 660, "y": 715, "width": 260, "height": 165,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "#69db7c", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 531, "version": 1, "versionNonce": 43, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_svc_jp_trans", "x": 660, "y": 718, "width": 260, "height": 159,
+      "angle": 0, "strokeColor": "#1a4731", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "JP Translation Svc\n──────────────────\nJapanTranslationStrategy.java\nPMDA + RxNorm crosswalk\nKatakana drug lookup\nZenkaku digit normalizer\nEGFR artefact correction",
+      "fontSize": 12, "fontFamily": 3, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "JP Translation Svc\n──────────────────\nJapanTranslationStrategy.java\nPMDA + RxNorm crosswalk\nKatakana drug lookup\nZenkaku digit normalizer\nEGFR artefact correction",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 532, "version": 1, "versionNonce": 44, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "svc_multi_trans", "x": 940, "y": 715, "width": 260, "height": 165,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "#b2f2bb", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "dashed", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 541, "version": 1, "versionNonce": 45, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_svc_multi_trans", "x": 940, "y": 718, "width": 260, "height": 159,
+      "angle": 0, "strokeColor": "#1a4731", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "Multi-Region Trans Svc\n──────────────────────\nTranslationStrategy.java\n[interface — OCP]\nPlug in CN, KR, DE...\nPassthrough fallback\nRxNorm API integration",
+      "fontSize": 12, "fontFamily": 3, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "Multi-Region Trans Svc\n──────────────────────\nTranslationStrategy.java\n[interface — OCP]\nPlug in CN, KR, DE...\nPassthrough fallback\nRxNorm API integration",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 542, "version": 1, "versionNonce": 46, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "svc_guardrail", "x": 1220, "y": 715, "width": 265, "height": 165,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "#69db7c", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 551, "version": 1, "versionNonce": 47, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_svc_guardrail", "x": 1220, "y": 718, "width": 265, "height": 159,
+      "angle": 0, "strokeColor": "#1a4731", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "Demographic Drift Guardrail\n──────────────────────────\nDemographicDriftGuardrail.java\nCircuit breaker < 0.80\nEGFR drift detection\nCN/JP/KR regional rates\nFlag: HUMAN_AUDIT\nFlag: DRIFT_DETECTED",
+      "fontSize": 11, "fontFamily": 3, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 11, "containerId": null, "originalText": "Demographic Drift Guardrail\n──────────────────────────\nDemographicDriftGuardrail.java\nCircuit breaker < 0.80\nEGFR drift detection\nCN/JP/KR regional rates\nFlag: HUMAN_AUDIT\nFlag: DRIFT_DETECTED",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 552, "version": 1, "versionNonce": 48, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "svc_snapshot", "x": 1505, "y": 715, "width": 265, "height": 165,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "#69db7c", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 561, "version": 1, "versionNonce": 49, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_svc_snapshot", "x": 1505, "y": 718, "width": 265, "height": 159,
+      "angle": 0, "strokeColor": "#1a4731", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "Patient Snapshot Builder\n────────────────────────\nGlobalPatientSnapshot.java\n[Java Record — immutable]\npatientId / region\nstandardizedDrugName\ndosageMg / egfrStatus\nocrConfidence / flags",
+      "fontSize": 11, "fontFamily": 3, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 11, "containerId": null, "originalText": "Patient Snapshot Builder\n────────────────────────\nGlobalPatientSnapshot.java\n[Java Record — immutable]\npatientId / region\nstandardizedDrugName\ndosageMg / egfrStatus\nocrConfidence / flags",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 562, "version": 1, "versionNonce": 50, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "sec5_container", "x": 80, "y": 945, "width": 2200, "height": 145,
+      "angle": 0, "strokeColor": "#e67700", "backgroundColor": "#ffe8cc", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 80,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 601, "version": 1, "versionNonce": 51, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "sec5_label", "x": 100, "y": 950, "width": 500, "height": 22,
+      "angle": 0, "strokeColor": "#7d4100", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "⑤ APACHE KAFKA — Async Event Bus  (Decouples ingestion from storage / consumers)",
+      "fontSize": 14, "fontFamily": 1, "textAlign": "left", "verticalAlign": "top",
+      "baseline": 13, "containerId": null, "originalText": "⑤ APACHE KAFKA — Async Event Bus  (Decouples ingestion from storage / consumers)",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 602, "version": 1, "versionNonce": 52, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "kafka_t1", "x": 110, "y": 978, "width": 290, "height": 95,
+      "angle": 0, "strokeColor": "#e67700", "backgroundColor": "#ffa94d", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 611, "version": 1, "versionNonce": 53, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_kafka_t1", "x": 110, "y": 982, "width": 290, "height": 87,
+      "angle": 0, "strokeColor": "#3d1f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "Topic: atlas.raw-ocr-scans\nProducer: OCR Adapter\nConsumer: Orchestrator Svc\nRetention: 7 days",
+      "fontSize": 12, "fontFamily": 3, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "Topic: atlas.raw-ocr-scans\nProducer: OCR Adapter\nConsumer: Orchestrator Svc\nRetention: 7 days",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 612, "version": 1, "versionNonce": 54, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "kafka_t2", "x": 420, "y": 978, "width": 290, "height": 95,
+      "angle": 0, "strokeColor": "#e67700", "backgroundColor": "#ffa94d", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 621, "version": 1, "versionNonce": 55, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_kafka_t2", "x": 420, "y": 982, "width": 290, "height": 87,
+      "angle": 0, "strokeColor": "#3d1f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "Topic: atlas.translated-records\nProducer: Translation Svcs\nConsumer: Guardrail Svc\nPartitions: by region",
+      "fontSize": 12, "fontFamily": 3, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "Topic: atlas.translated-records\nProducer: Translation Svcs\nConsumer: Guardrail Svc\nPartitions: by region",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 622, "version": 1, "versionNonce": 56, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "kafka_t3", "x": 730, "y": 978, "width": 290, "height": 95,
+      "angle": 0, "strokeColor": "#e67700", "backgroundColor": "#ffa94d", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 631, "version": 1, "versionNonce": 57, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_kafka_t3", "x": 730, "y": 982, "width": 290, "height": 87,
+      "angle": 0, "strokeColor": "#3d1f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "Topic: atlas.validated-snapshots\nProducer: Snapshot Builder\nConsumer: Data Layer writers\nKey: patientId",
+      "fontSize": 12, "fontFamily": 3, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "Topic: atlas.validated-snapshots\nProducer: Snapshot Builder\nConsumer: Data Layer writers\nKey: patientId",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 632, "version": 1, "versionNonce": 58, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "kafka_t4", "x": 1040, "y": 978, "width": 290, "height": 95,
+      "angle": 0, "strokeColor": "#e67700", "backgroundColor": "#ffa94d", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 641, "version": 1, "versionNonce": 59, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_kafka_t4", "x": 1040, "y": 982, "width": 290, "height": 87,
+      "angle": 0, "strokeColor": "#3d1f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "Topic: atlas.audit-flags\nProducer: Guardrail Svc\nConsumer: Elasticsearch\nConsumer: HIPAA Engine",
+      "fontSize": 12, "fontFamily": 3, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "Topic: atlas.audit-flags\nProducer: Guardrail Svc\nConsumer: Elasticsearch\nConsumer: HIPAA Engine",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 642, "version": 1, "versionNonce": 60, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "kafka_t5", "x": 1350, "y": 978, "width": 290, "height": 95,
+      "angle": 0, "strokeColor": "#e67700", "backgroundColor": "#ffa94d", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 651, "version": 1, "versionNonce": 61, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_kafka_t5", "x": 1350, "y": 982, "width": 290, "height": 87,
+      "angle": 0, "strokeColor": "#3d1f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "Topic: atlas.human-audit-queue\nProducer: Guardrail (< 0.80)\nConsumer: ServiceNow / Jira\nPriority: CRITICAL",
+      "fontSize": 12, "fontFamily": 3, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "Topic: atlas.human-audit-queue\nProducer: Guardrail (< 0.80)\nConsumer: ServiceNow / Jira\nPriority: CRITICAL",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 652, "version": 1, "versionNonce": 62, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "sec6_container", "x": 80, "y": 1140, "width": 2200, "height": 175,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "#e5dbff", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 80,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 701, "version": 1, "versionNonce": 63, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "sec6_label", "x": 100, "y": 1145, "width": 400, "height": 22,
+      "angle": 0, "strokeColor": "#3b0764", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "⑥ DATA PERSISTENCE LAYER",
+      "fontSize": 14, "fontFamily": 1, "textAlign": "left", "verticalAlign": "top",
+      "baseline": 13, "containerId": null, "originalText": "⑥ DATA PERSISTENCE LAYER",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 702, "version": 1, "versionNonce": 64, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "db_postgres", "x": 105, "y": 1172, "width": 245, "height": 128,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "#b197fc", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 711, "version": 1, "versionNonce": 65, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_db_postgres", "x": 105, "y": 1176, "width": 245, "height": 120,
+      "angle": 0, "strokeColor": "#3b0764", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🐘 PostgreSQL\nPatient Records\nGlobalPatientSnapshot\nIndexed by patientId\nReplica set (HA)",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "🐘 PostgreSQL\nPatient Records\nGlobalPatientSnapshot\nIndexed by patientId\nReplica set (HA)",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 712, "version": 1, "versionNonce": 66, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "db_redis", "x": 365, "y": 1172, "width": 245, "height": 128,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "#b197fc", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 721, "version": 1, "versionNonce": 67, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_db_redis", "x": 365, "y": 1176, "width": 245, "height": 120,
+      "angle": 0, "strokeColor": "#3b0764", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "⚡ Redis Cluster\nDrug Dict Cache\nRxNorm lookups\nTTL: 24h\nHit rate: ~95%",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "⚡ Redis Cluster\nDrug Dict Cache\nRxNorm lookups\nTTL: 24h\nHit rate: ~95%",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 722, "version": 1, "versionNonce": 68, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "db_s3", "x": 625, "y": 1172, "width": 245, "height": 128,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "#b197fc", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 731, "version": 1, "versionNonce": 69, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_db_s3", "x": 625, "y": 1176, "width": 245, "height": 120,
+      "angle": 0, "strokeColor": "#3b0764", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🗄 AWS S3\nRaw Scan Archive\nImmutable record store\nVersioning ON\nServer-side encryption",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "🗄 AWS S3\nRaw Scan Archive\nImmutable record store\nVersioning ON\nServer-side encryption",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 732, "version": 1, "versionNonce": 70, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "db_elastic", "x": 885, "y": 1172, "width": 245, "height": 128,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "#b197fc", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 741, "version": 1, "versionNonce": 71, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_db_elastic", "x": 885, "y": 1176, "width": 245, "height": 120,
+      "angle": 0, "strokeColor": "#3b0764", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🔍 Elasticsearch\nAudit Logs & Search\nFlag event indexing\nFull-text drug search\nKibana dashboards",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "🔍 Elasticsearch\nAudit Logs & Search\nFlag event indexing\nFull-text drug search\nKibana dashboards",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 742, "version": 1, "versionNonce": 72, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "db_mongo", "x": 1145, "y": 1172, "width": 245, "height": 128,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "#b197fc", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 751, "version": 1, "versionNonce": 73, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_db_mongo", "x": 1145, "y": 1176, "width": 245, "height": 120,
+      "angle": 0, "strokeColor": "#3b0764", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🍃 MongoDB\nRaw OCR Payloads\nUnstructured JSON\nPre-crosswalk data\nSchema-free store",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "🍃 MongoDB\nRaw OCR Payloads\nUnstructured JSON\nPre-crosswalk data\nSchema-free store",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 752, "version": 1, "versionNonce": 74, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "db_dynamo", "x": 1405, "y": 1172, "width": 245, "height": 128,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "#b197fc", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 761, "version": 1, "versionNonce": 75, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_db_dynamo", "x": 1405, "y": 1176, "width": 245, "height": 120,
+      "angle": 0, "strokeColor": "#3b0764", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "⚡ DynamoDB\nSession & Config Store\nPipeline run state\nStrategy registry config\nSub-ms latency",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "⚡ DynamoDB\nSession & Config Store\nPipeline run state\nStrategy registry config\nSub-ms latency",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 762, "version": 1, "versionNonce": 76, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "sec7_container", "x": 80, "y": 1365, "width": 2200, "height": 150,
+      "angle": 0, "strokeColor": "#f59f00", "backgroundColor": "#ffec99", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 80,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 801, "version": 1, "versionNonce": 77, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "sec7_label", "x": 100, "y": 1370, "width": 400, "height": 22,
+      "angle": 0, "strokeColor": "#7d4100", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "⑦ OUTPUT & CONSUMER SYSTEMS",
+      "fontSize": 14, "fontFamily": 1, "textAlign": "left", "verticalAlign": "top",
+      "baseline": 13, "containerId": null, "originalText": "⑦ OUTPUT & CONSUMER SYSTEMS",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 802, "version": 1, "versionNonce": 78, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "out_research", "x": 105, "y": 1395, "width": 245, "height": 105,
+      "angle": 0, "strokeColor": "#f59f00", "backgroundColor": "#ffd43b", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 811, "version": 1, "versionNonce": 79, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_out_research", "x": 105, "y": 1399, "width": 245, "height": 97,
+      "angle": 0, "strokeColor": "#3d1f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "📊 Research Analytics\nTableau / PowerBI\nEGFR drift reports\nCohort dashboards",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "📊 Research Analytics\nTableau / PowerBI\nEGFR drift reports\nCohort dashboards",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 812, "version": 1, "versionNonce": 80, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "out_audit", "x": 370, "y": 1395, "width": 245, "height": 105,
+      "angle": 0, "strokeColor": "#f59f00", "backgroundColor": "#ffd43b", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 821, "version": 1, "versionNonce": 81, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_out_audit", "x": 370, "y": 1399, "width": 245, "height": 97,
+      "angle": 0, "strokeColor": "#3d1f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🔔 Human Audit Queue\nServiceNow / Jira\nREQUIRES_HUMAN_AUDIT\nClinician review SLA",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "🔔 Human Audit Queue\nServiceNow / Jira\nREQUIRES_HUMAN_AUDIT\nClinician review SLA",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 822, "version": 1, "versionNonce": 82, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "out_ehr_ds", "x": 635, "y": 1395, "width": 245, "height": 105,
+      "angle": 0, "strokeColor": "#f59f00", "backgroundColor": "#ffd43b", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 831, "version": 1, "versionNonce": 83, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_out_ehr_ds", "x": 635, "y": 1399, "width": 245, "height": 97,
+      "angle": 0, "strokeColor": "#3d1f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🏥 Downstream EHR\nEpic FHIR R4 API\nStandardized records\nBI-directional sync",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "🏥 Downstream EHR\nEpic FHIR R4 API\nStandardized records\nBI-directional sync",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 832, "version": 1, "versionNonce": 84, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "out_genomics", "x": 900, "y": 1395, "width": 245, "height": 105,
+      "angle": 0, "strokeColor": "#f59f00", "backgroundColor": "#ffd43b", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 841, "version": 1, "versionNonce": 85, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_out_genomics", "x": 900, "y": 1399, "width": 245, "height": 97,
+      "angle": 0, "strokeColor": "#3d1f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🧬 Genomics Platform\nAWS HealthOmics\nEGFR cohort feeds\nVariant annotation",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "🧬 Genomics Platform\nAWS HealthOmics\nEGFR cohort feeds\nVariant annotation",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 842, "version": 1, "versionNonce": 86, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "out_hipaa", "x": 1165, "y": 1395, "width": 245, "height": 105,
+      "angle": 0, "strokeColor": "#f59f00", "backgroundColor": "#ffd43b", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 851, "version": 1, "versionNonce": 87, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_out_hipaa", "x": 1165, "y": 1399, "width": 245, "height": 97,
+      "angle": 0, "strokeColor": "#3d1f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🔒 HIPAA Audit Trail\nImmutable event log\nPHI access records\nGDPR compliant",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "🔒 HIPAA Audit Trail\nImmutable event log\nPHI access records\nGDPR compliant",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 852, "version": 1, "versionNonce": 88, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "cc_container", "x": 2360, "y": 685, "width": 340, "height": 830,
+      "angle": 0, "strokeColor": "#c2255c", "backgroundColor": "#ffdeeb", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 85,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 901, "version": 1, "versionNonce": 89, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "cc_label", "x": 2380, "y": 690, "width": 300, "height": 22,
+      "angle": 0, "strokeColor": "#a61e4d", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "⑧ CROSS-CUTTING CONCERNS",
+      "fontSize": 13, "fontFamily": 1, "textAlign": "center", "verticalAlign": "top",
+      "baseline": 13, "containerId": null, "originalText": "⑧ CROSS-CUTTING CONCERNS",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 902, "version": 1, "versionNonce": 90, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "cc_monitoring", "x": 2385, "y": 720, "width": 295, "height": 160,
+      "angle": 0, "strokeColor": "#c2255c", "backgroundColor": "#fcc2d7", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 911, "version": 1, "versionNonce": 91, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_cc_monitoring", "x": 2385, "y": 724, "width": 295, "height": 152,
+      "angle": 0, "strokeColor": "#5c1a33", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "📈 Observability\nPrometheus scraping\nGrafana dashboards\nOCR confidence P95\nKafka consumer lag\nPipeline throughput\nAlert: PagerDuty",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "📈 Observability\nPrometheus scraping\nGrafana dashboards\nOCR confidence P95\nKafka consumer lag\nPipeline throughput\nAlert: PagerDuty",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 912, "version": 1, "versionNonce": 92, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "cc_security", "x": 2385, "y": 900, "width": 295, "height": 160,
+      "angle": 0, "strokeColor": "#c2255c", "backgroundColor": "#fcc2d7", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 921, "version": 1, "versionNonce": 93, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_cc_security", "x": 2385, "y": 904, "width": 295, "height": 152,
+      "angle": 0, "strokeColor": "#5c1a33", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🔐 Security\nOAuth2 / JWT tokens\nHashiCorp Vault\nAt-rest encryption\nmTLS service mesh\nRBAC per endpoint\nPHI de-identification",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "🔐 Security\nOAuth2 / JWT tokens\nHashiCorp Vault\nAt-rest encryption\nmTLS service mesh\nRBAC per endpoint\nPHI de-identification",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 922, "version": 1, "versionNonce": 94, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "cc_cicd", "x": 2385, "y": 1080, "width": 295, "height": 155,
+      "angle": 0, "strokeColor": "#c2255c", "backgroundColor": "#fcc2d7", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 931, "version": 1, "versionNonce": 95, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_cc_cicd", "x": 2385, "y": 1084, "width": 295, "height": 147,
+      "angle": 0, "strokeColor": "#5c1a33", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "🚀 CI/CD Pipeline\nGitHub Actions\nDocker + Kubernetes\nHelm chart deploy\nJUnit / integration tests\nSonarQube gate\nmvn clean package",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "🚀 CI/CD Pipeline\nGitHub Actions\nDocker + Kubernetes\nHelm chart deploy\nJUnit / integration tests\nSonarQube gate\nmvn clean package",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 932, "version": 1, "versionNonce": 96, "isDeleted": false
+    },
+
+    {
+      "type": "rectangle", "id": "cc_compliance", "x": 2385, "y": 1255, "width": 295, "height": 155,
+      "angle": 0, "strokeColor": "#c2255c", "backgroundColor": "#fcc2d7", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 941, "version": 1, "versionNonce": 97, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_cc_compliance", "x": 2385, "y": 1259, "width": 295, "height": 147,
+      "angle": 0, "strokeColor": "#5c1a33", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "📋 Compliance\nHIPAA BAA signed\nGDPR data residency\nISO 27001 controls\nSOC 2 Type II audit\nData retention policies\nRight-to-erasure flow",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 12, "containerId": null, "originalText": "📋 Compliance\nHIPAA BAA signed\nGDPR data residency\nISO 27001 controls\nSOC 2 Type II audit\nData retention policies\nRight-to-erasure flow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 942, "version": 1, "versionNonce": 98, "isDeleted": false
+    },
+
+    { "type": "arrow", "id": "a_ehr_textract",
+      "x": 210, "y": 240, "width": 0, "height": 110,
+      "angle": 0, "strokeColor": "#1971c2", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[0,110]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1001, "version": 1, "versionNonce": 99, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_pacs_azure",
+      "x": 440, "y": 240, "width": 0, "height": 110,
+      "angle": 0, "strokeColor": "#1971c2", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[0,110]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1002, "version": 1, "versionNonce": 100, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_fax_google",
+      "x": 670, "y": 240, "width": 0, "height": 110,
+      "angle": 0, "strokeColor": "#1971c2", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[0,110]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1003, "version": 1, "versionNonce": 101, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_jp_to_adapter",
+      "x": 1130, "y": 240, "width": -210, "height": 110,
+      "angle": 0, "strokeColor": "#1971c2", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[-210,110]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1004, "version": 1, "versionNonce": 102, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_ocr_to_adapter",
+      "x": 555, "y": 410, "width": 250, "height": 0,
+      "angle": 0, "strokeColor": "#099268", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[250,0]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1005, "version": 1, "versionNonce": 103, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_adapter_to_gw",
+      "x": 920, "y": 470, "width": -510, "height": 88,
+      "angle": 0, "strokeColor": "#099268", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[-510,88]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1006, "version": 1, "versionNonce": 104, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_gw_to_orchestrator",
+      "x": 505, "y": 620, "width": 0, "height": 95,
+      "angle": 0, "strokeColor": "#495057", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[0,95]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1007, "version": 1, "versionNonce": 105, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_orch_to_jp",
+      "x": 560, "y": 800, "width": 100, "height": 0,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[100,0]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1008, "version": 1, "versionNonce": 106, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_orch_to_multi",
+      "x": 640, "y": 818, "width": 300, "height": 0,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[300,0]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1009, "version": 1, "versionNonce": 107, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_jp_to_guardrail",
+      "x": 920, "y": 800, "width": 300, "height": 0,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[300,0]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1010, "version": 1, "versionNonce": 108, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_guardrail_to_snapshot",
+      "x": 1485, "y": 800, "width": 20, "height": 0,
+      "angle": 0, "strokeColor": "#2f9e44", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[20,0]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1011, "version": 1, "versionNonce": 109, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_snapshot_to_kafka",
+      "x": 1637, "y": 880, "width": 0, "height": 65,
+      "angle": 0, "strokeColor": "#e67700", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[0,65]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1012, "version": 1, "versionNonce": 110, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_kafka_to_postgres",
+      "x": 730, "y": 1090, "width": -500, "height": 82,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[-500,82]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1013, "version": 1, "versionNonce": 111, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_kafka_to_elastic",
+      "x": 1040, "y": 1090, "width": -10, "height": 82,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[-10,82]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1014, "version": 1, "versionNonce": 112, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_redis_to_jp",
+      "x": 480, "y": 1172, "width": 210, "height": -292,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "dashed", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[210,-292]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": "arrow", "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1015, "version": 1, "versionNonce": 113, "isDeleted": false },
+
+    { "type": "text", "id": "t_redis_cache_label", "x": 560, "y": 1010, "width": 160, "height": 30,
+      "angle": 0, "strokeColor": "#7048e8", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "RxNorm cache lookup",
+      "fontSize": 11, "fontFamily": 1, "textAlign": "center", "verticalAlign": "middle",
+      "baseline": 11, "containerId": null, "originalText": "RxNorm cache lookup",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1016, "version": 1, "versionNonce": 114, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_postgres_to_research",
+      "x": 227, "y": 1300, "width": 0, "height": 95,
+      "angle": 0, "strokeColor": "#f59f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[0,95]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1017, "version": 1, "versionNonce": 115, "isDeleted": false },
+
+    { "type": "arrow", "id": "a_kafka_to_audit",
+      "x": 1495, "y": 1073, "width": -1010, "height": 322,
+      "angle": 0, "strokeColor": "#f59f00", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "points": [[0,0],[-1010,322]], "lastCommittedPoint": null,
+      "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1018, "version": 1, "versionNonce": 116, "isDeleted": false },
+
+    {
+      "type": "rectangle", "id": "legend_box", "x": 1800, "y": 1365, "width": 480, "height": 150,
+      "angle": 0, "strokeColor": "#333", "backgroundColor": "#f1f3f5", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "roundness": {"type": 3}, "groupIds": [], "frameId": null, "boundElements": [],
+      "updated": 1, "link": null, "locked": false, "seed": 1100, "version": 1, "versionNonce": 117, "isDeleted": false
+    },
+    {
+      "type": "text", "id": "t_legend", "x": 1815, "y": 1372, "width": 450, "height": 136,
+      "angle": 0, "strokeColor": "#333", "backgroundColor": "transparent", "fillStyle": "solid",
+      "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "text": "LEGEND\n■ Blue — External Data Sources\n■ Teal/Green — OCR Layer & Core Microservices (Atlas-EHR codebase)\n■ Gray — API Gateway / Infrastructure\n■ Orange — Apache Kafka Message Bus\n■ Purple — Data Persistence Layer\n■ Yellow — Output & Consumer Systems\n■ Pink — Cross-Cutting Concerns\n- - - Dashed arrow = cache read/write (bidirectional)",
+      "fontSize": 12, "fontFamily": 1, "textAlign": "left", "verticalAlign": "top",
+      "baseline": 12, "containerId": null, "originalText": "LEGEND\n■ Blue — External Data Sources\n■ Teal/Green — OCR Layer & Core Microservices (Atlas-EHR codebase)\n■ Gray — API Gateway / Infrastructure\n■ Orange — Apache Kafka Message Bus\n■ Purple — Data Persistence Layer\n■ Yellow — Output & Consumer Systems\n■ Pink — Cross-Cutting Concerns\n- - - Dashed arrow = cache read/write (bidirectional)",
+      "groupIds": [], "frameId": null, "boundElements": [], "updated": 1, "link": null, "locked": false,
+      "seed": 1101, "version": 1, "versionNonce": 118, "isDeleted": false
+    }
+
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#f8f9fa",
+    "zoom": { "value": 0.7 },
+    "scrollX": -30,
+    "scrollY": -10
+  },
+  "files": {}
+}
