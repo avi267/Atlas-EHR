@@ -1,0 +1,7 @@
+services:
+  atlas-ehr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: atlas-ehr
+    restart: "no"
