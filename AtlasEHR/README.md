@@ -316,6 +316,29 @@ java -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -jar target/atlas-ehr.jar
 
 > **Note:** The `-Dstdout.encoding=UTF-8` flag is required on Windows to render Japanese katakana, kanji, and box-drawing characters correctly in the terminal. On macOS/Linux this flag is usually unnecessary.
 
+
+### Run with Docker Compose
+
+**Prerequisites:** Docker Desktop (includes both Docker and Docker Compose)
+
+```bash
+docker compose up --build
+```
+
+This builds the image from the [`Dockerfile`](Dockerfile) (multi-stage: Maven build → JRE runtime) and runs the application in a container. Output is streamed directly to your terminal.
+
+To run without rebuilding the image on subsequent runs:
+
+```bash
+docker compose up
+```
+
+To stop and remove the container:
+
+```bash
+docker compose down
+```
+
 ### Expected output structure
 ```
 ══════════════════════════════════════════════
