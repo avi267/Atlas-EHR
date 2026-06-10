@@ -1,0 +1,440 @@
+══════════════════════════════════════════════════════════════════════
+  █████╗ ████████╗██╗      █████╗ ███████╗    ███████╗██╗  ██╗██████╗
+ ██╔══██╗╚══██╔══╝██║     ██╔══██╗██╔════╝    ██╔════╝██║  ██║██╔══██╗
+ ███████║   ██║   ██║     ███████║███████╗    █████╗  ███████║██████╔╝
+ ██╔══██║   ██║   ██║     ██╔══██║╚════██║    ██╔══╝  ██╔══██║██╔══██╗
+ ██║  ██║   ██║   ███████╗██║  ██║███████║    ███████╗██║  ██║██║  ██║
+ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝
+
+  Enterprise HealthTech EHR Ingestion Platform
+══════════════════════════════════════════════════════════════════════
+
+
+──────────────────────────────────────────────────────────────────────
+  ◆  PIPELINE INITIALIZATION
+──────────────────────────────────────────────────────────────────────
+Jun 10, 2026 6:22:43 PM com.loc.atlas.AtlasEHRApplication main
+INFO: [Atlas-EHR] Simulation session started at 2026-06-10 18:22:43 JST
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator registerStrategy
+INFO: [Orchestrator] Registered strategy: JP → JapanTranslationStrategy
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator <init>
+INFO: [Orchestrator] Initialized — 1 regional strategies registered: [JP]
+Jun 10, 2026 6:22:43 PM com.loc.atlas.mock.MockOcrRegistry getAllScans
+INFO: [MockOcrRegistry] Catalogue initialized — 11 synthetic scan documents loaded.
+  ✔  IngestionOrchestrator initialized
+  ✔  JapanTranslationStrategy registered (region: JP)
+  ✔  DemographicDriftGuardrail configured:
+       OCR confidence threshold : 0.80
+       Western EGFR baseline    : 15%
+       Drift detection threshold: 35 pp deviation
+
+──────────────────────────────────────────────────────────────────────
+  ◆  OCR SCAN CATALOGUE
+──────────────────────────────────────────────────────────────────────
+  11 synthetic scan documents loaded from MockOcrRegistry:
+  [1] patient=US-PAT-00412    region=US  confidence=0.97  drug=Capecitabine
+  [2] patient=UK-PAT-00887    region=UK  confidence=0.91  drug=Capecitabine
+  [3] patient=JP-PAT-20031    region=JP  confidence=0.94  drug=ゼローダ
+  [4] patient=JP-PAT-20089    region=JP  confidence=0.62  drug=ゼロ—ダ
+  [5] patient=US-PAT-00553    region=US  confidence=0.88  drug=Erlotinib
+  [6] patient=JP-PAT-20114    region=JP  confidence=0.96  drug=イレッサ
+  [7] patient=KR-PAT-50023    region=KR  confidence=0.93  drug=Nivolumab
+  [8] patient=US-PAT-00731    region=US  confidence=0.81  drug=Pembrolizumab
+  [9] patient=JP-PAT-20201    region=JP  confidence=0.85  drug=ハーセプチン
+  [10] patient=UK-PAT-01102    region=UK  confidence=0.58  drug=Bev4cizum4b
+  [11] patient=CN-PAT-70055    region=CN  confidence=0.95  drug=Osimertinib
+
+──────────────────────────────────────────────────────────────────────
+  ◆  PIPELINE EXECUTION  [ Extraction → Crosswalk → Drift Check ]
+──────────────────────────────────────────────────────────────────────
+
+  ┌─[ Record 1 / 11 ]──────────────────────────────────────────────
+  │  Patient : US-PAT-00412   Region : US   OCR Confidence : 0.97
+  │
+  ├── Stage 1 │ OCR Extraction
+  Raw fields received   : 6
+  OCR confidence score  : 0.97
+  │
+  ├── Stage 2 │ Regional Crosswalk
+  Resolving strategy    : PassthroughTranslationStrategy
+  │
+  ├── Stage 3 │ Demographic Drift Guardrail
+  Confidence gate       : PASSED
+
+  ┌─[ Record 2 / 11 ]──────────────────────────────────────────────
+  │  Patient : UK-PAT-00887   Region : UK   OCR Confidence : 0.91
+  │
+  ├── Stage 1 │ OCR Extraction
+  Raw fields received   : 6
+  OCR confidence score  : 0.91
+  │
+  ├── Stage 2 │ Regional Crosswalk
+  Resolving strategy    : PassthroughTranslationStrategy
+  │
+  ├── Stage 3 │ Demographic Drift Guardrail
+  Confidence gate       : PASSED
+
+  ┌─[ Record 3 / 11 ]──────────────────────────────────────────────
+  │  Patient : JP-PAT-20031   Region : JP   OCR Confidence : 0.94
+  │
+  ├── Stage 1 │ OCR Extraction
+  Raw fields received   : 6
+  OCR confidence score  : 0.94
+  │
+  ├── Stage 2 │ Regional Crosswalk
+  Resolving strategy    : JapanTranslationStrategy
+  Drug dictionary       : PMDA + RxNorm crosswalk active
+  EGFR normalization    : OCR-artefact correction active
+  Dosage normalization  : zenkaku digit + unit parser active
+  │
+  ├── Stage 3 │ Demographic Drift Guardrail
+  Confidence gate       : PASSED
+  Regional EGFR rate    : ~50% (JP) vs 15% (Western baseline)
+  Drift detection       : EVALUATING ...
+
+  ┌─[ Record 4 / 11 ]──────────────────────────────────────────────
+  │  Patient : JP-PAT-20089   Region : JP   OCR Confidence : 0.62
+  │
+  ├── Stage 1 │ OCR Extraction
+  Raw fields received   : 6
+  OCR confidence score  : 0.62
+  │
+  ├── Stage 2 │ Regional Crosswalk
+  Resolving strategy    : JapanTranslationStrategy
+  Drug dictionary       : PMDA + RxNorm crosswalk active
+  EGFR normalization    : OCR-artefact correction active
+  Dosage normalization  : zenkaku digit + unit parser active
+  │
+  ├── Stage 3 │ Demographic Drift Guardrail
+  ⚠  CIRCUIT BREAKER → confidence 0.62 < threshold 0.80
+  ↳  Record short-circuited → REQUIRES_HUMAN_AUDIT
+
+  ┌─[ Record 5 / 11 ]──────────────────────────────────────────────
+  │  Patient : US-PAT-00553   Region : US   OCR Confidence : 0.88
+  │
+  ├── Stage 1 │ OCR Extraction
+  Raw fields received   : 5
+  OCR confidence score  : 0.88
+  │
+  ├── Stage 2 │ Regional Crosswalk
+  Resolving strategy    : PassthroughTranslationStrategy
+  │
+  ├── Stage 3 │ Demographic Drift Guardrail
+  Confidence gate       : PASSED
+
+  ┌─[ Record 6 / 11 ]──────────────────────────────────────────────
+  │  Patient : JP-PAT-20114   Region : JP   OCR Confidence : 0.96
+  │
+  ├── Stage 1 │ OCR Extraction
+  Raw fields received   : 6
+  OCR confidence score  : 0.96
+  │
+  ├── Stage 2 │ Regional Crosswalk
+  Resolving strategy    : JapanTranslationStrategy
+  Drug dictionary       : PMDA + RxNorm crosswalk active
+  EGFR normalization    : OCR-artefact correction active
+  Dosage normalization  : zenkaku digit + unit parser active
+  │
+  ├── Stage 3 │ Demographic Drift Guardrail
+  Confidence gate       : PASSED
+  Regional EGFR rate    : ~50% (JP) vs 15% (Western baseline)
+  Drift detection       : EVALUATING ...
+
+  ┌─[ Record 7 / 11 ]──────────────────────────────────────────────
+  │  Patient : KR-PAT-50023   Region : KR   OCR Confidence : 0.93
+  │
+  ├── Stage 1 │ OCR Extraction
+  Raw fields received   : 6
+  OCR confidence score  : 0.93
+  │
+  ├── Stage 2 │ Regional Crosswalk
+  Resolving strategy    : PassthroughTranslationStrategy
+  │
+  ├── Stage 3 │ Demographic Drift Guardrail
+  Confidence gate       : PASSED
+
+  ┌─[ Record 8 / 11 ]──────────────────────────────────────────────
+  │  Patient : US-PAT-00731   Region : US   OCR Confidence : 0.81
+  │
+  ├── Stage 1 │ OCR Extraction
+  Raw fields received   : 6
+  OCR confidence score  : 0.81
+  │
+  ├── Stage 2 │ Regional Crosswalk
+  Resolving strategy    : PassthroughTranslationStrategy
+  │
+  ├── Stage 3 │ Demographic Drift Guardrail
+  Confidence gate       : PASSED
+
+  ┌─[ Record 9 / 11 ]──────────────────────────────────────────────
+  │  Patient : JP-PAT-20201   Region : JP   OCR Confidence : 0.85
+  │
+  ├── Stage 1 │ OCR Extraction
+  Raw fields received   : 6
+  OCR confidence score  : 0.85
+  │
+  ├── Stage 2 │ Regional Crosswalk
+  Resolving strategy    : JapanTranslationStrategy
+  Drug dictionary       : PMDA + RxNorm crosswalk active
+  EGFR normalization    : OCR-artefact correction active
+  Dosage normalization  : zenkaku digit + unit parser active
+  │
+  ├── Stage 3 │ Demographic Drift Guardrail
+  Confidence gate       : PASSED
+  Regional EGFR rate    : ~50% (JP) vs 15% (Western baseline)
+  Drift detection       : EVALUATING ...
+
+  ┌─[ Record 10 / 11 ]──────────────────────────────────────────────
+  │  Patient : UK-PAT-01102   Region : UK   OCR Confidence : 0.58
+  │
+  ├── Stage 1 │ OCR Extraction
+  Raw fields received   : 6
+  OCR confidence score  : 0.58
+  │
+  ├── Stage 2 │ Regional Crosswalk
+  Resolving strategy    : PassthroughTranslationStrategy
+  │
+  ├── Stage 3 │ Demographic Drift Guardrail
+  ⚠  CIRCUIT BREAKER → confidence 0.58 < threshold 0.80
+  ↳  Record short-circuited → REQUIRES_HUMAN_AUDIT
+
+  ┌─[ Record 11 / 11 ]──────────────────────────────────────────────
+  │  Patient : CN-PAT-70055   Region : CN   OCR Confidence : 0.95
+  │
+  ├── Stage 1 │ OCR Extraction
+  Raw fields received   : 6
+  OCR confidence score  : 0.95
+  │
+  ├── Stage 2 │ Regional Crosswalk
+  Resolving strategy    : PassthroughTranslationStrategy
+  │
+  ├── Stage 3 │ Demographic Drift Guardrail
+  Confidence gate       : PASSED
+
+  ═══════════════════════════════════════════════════════════════
+  Dispatching all records to orchestrator ...
+  ═══════════════════════════════════════════════════════════════
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] Starting batch ingestion — 11 records to process.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] ── Record 1/11 ── patient='US-PAT-00412' region='US'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator resolveStrategy
+WARNING: [Orchestrator] No registered strategy for region 'US' — applying passthrough strategy.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Evaluating patient 'US-PAT-00412' [US] — OCR confidence: 0.97
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Patient 'US-PAT-00412' passed all checks — no flags applied.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] ── Record 2/11 ── patient='UK-PAT-00887' region='UK'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator resolveStrategy
+WARNING: [Orchestrator] No registered strategy for region 'UK' — applying passthrough strategy.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Evaluating patient 'UK-PAT-00887' [UK] — OCR confidence: 0.91
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Patient 'UK-PAT-00887' passed all checks — no flags applied.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] ── Record 3/11 ── patient='JP-PAT-20031' region='JP'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.translation.JapanTranslationStrategy crosswalkToGlobal
+INFO: [JP Strategy] Beginning crosswalk for patient 'JP-PAT-20031'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.translation.JapanTranslationStrategy crosswalkToGlobal
+INFO: [JP Strategy] Crosswalk complete for patient 'JP-PAT-20031' — drug='Capecitabine (RxNorm ID: 173562)', dosage=500.0mg, egfr='Positive'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Evaluating patient 'JP-PAT-20031' [JP] — OCR confidence: 0.94
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Patient 'JP-PAT-20031' passed all checks — no flags applied.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] ── Record 4/11 ── patient='JP-PAT-20089' region='JP'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.translation.JapanTranslationStrategy crosswalkToGlobal
+INFO: [JP Strategy] Beginning crosswalk for patient 'JP-PAT-20089'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.translation.JapanTranslationStrategy crosswalkToGlobal
+INFO: [JP Strategy] Crosswalk complete for patient 'JP-PAT-20089' — drug='Capecitabine (RxNorm ID: 173562)', dosage=500.0mg, egfr='Positive'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Evaluating patient 'JP-PAT-20089' [JP] — OCR confidence: 0.62
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+WARNING: [Guardrail] CIRCUIT BREAKER TRIPPED for patient 'JP-PAT-20089': OCR confidence 0.62 is below safety threshold 0.80. Marking REQUIRES_HUMAN_AUDIT and short-circuiting pipeline.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] ── Record 5/11 ── patient='US-PAT-00553' region='US'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator resolveStrategy
+WARNING: [Orchestrator] No registered strategy for region 'US' — applying passthrough strategy.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Evaluating patient 'US-PAT-00553' [US] — OCR confidence: 0.88
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+WARNING: [Guardrail] Patient 'US-PAT-00553' has no resolvable EGFR biomarker status. Appending BIOMARKER_MISSING flag for downstream lab correlation.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Patient 'US-PAT-00553' evaluation complete — flags: [BIOMARKER_MISSING]
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] ── Record 6/11 ── patient='JP-PAT-20114' region='JP'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.translation.JapanTranslationStrategy crosswalkToGlobal
+INFO: [JP Strategy] Beginning crosswalk for patient 'JP-PAT-20114'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.translation.JapanTranslationStrategy crosswalkToGlobal
+INFO: [JP Strategy] Crosswalk complete for patient 'JP-PAT-20114' — drug='Gefitinib (RxNorm ID: 210557)', dosage=250.0mg, egfr='Positive'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Evaluating patient 'JP-PAT-20114' [JP] — OCR confidence: 0.96
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Patient 'JP-PAT-20114' passed all checks — no flags applied.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] ── Record 7/11 ── patient='KR-PAT-50023' region='KR'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator resolveStrategy
+WARNING: [Orchestrator] No registered strategy for region 'KR' — applying passthrough strategy.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Evaluating patient 'KR-PAT-50023' [KR] — OCR confidence: 0.93
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Patient 'KR-PAT-50023' passed all checks — no flags applied.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] ── Record 8/11 ── patient='US-PAT-00731' region='US'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator resolveStrategy
+WARNING: [Orchestrator] No registered strategy for region 'US' — applying passthrough strategy.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Evaluating patient 'US-PAT-00731' [US] — OCR confidence: 0.81
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Patient 'US-PAT-00731' passed all checks — no flags applied.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] ── Record 9/11 ── patient='JP-PAT-20201' region='JP'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.translation.JapanTranslationStrategy crosswalkToGlobal
+INFO: [JP Strategy] Beginning crosswalk for patient 'JP-PAT-20201'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.translation.JapanTranslationStrategy crosswalkToGlobal
+INFO: [JP Strategy] Crosswalk complete for patient 'JP-PAT-20201' — drug='Trastuzumab (RxNorm ID: 224914)', dosage=600.0mg, egfr='Negative'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Evaluating patient 'JP-PAT-20201' [JP] — OCR confidence: 0.85
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Patient 'JP-PAT-20201' passed all checks — no flags applied.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] ── Record 10/11 ── patient='UK-PAT-01102' region='UK'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator resolveStrategy
+WARNING: [Orchestrator] No registered strategy for region 'UK' — applying passthrough strategy.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Evaluating patient 'UK-PAT-01102' [UK] — OCR confidence: 0.58
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+WARNING: [Guardrail] CIRCUIT BREAKER TRIPPED for patient 'UK-PAT-01102': OCR confidence 0.58 is below safety threshold 0.80. Marking REQUIRES_HUMAN_AUDIT and short-circuiting pipeline.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] ── Record 11/11 ── patient='CN-PAT-70055' region='CN'
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator resolveStrategy
+WARNING: [Orchestrator] No registered strategy for region 'CN' — applying passthrough strategy.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Evaluating patient 'CN-PAT-70055' [CN] — OCR confidence: 0.95
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail checkDemographicDrift
+WARNING: [Guardrail] DEMOGRAPHIC DRIFT DETECTED for patient 'CN-PAT-70055' [CN]: implied regional EGFR positive rate (51%) deviates from Western baseline (15%) by 36 percentage points (threshold: 35 pp). Appending DEMOGRAPHIC_DRIFT_DETECTED flag for research telemetry.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.validation.DemographicDriftGuardrail evaluate
+INFO: [Guardrail] Patient 'CN-PAT-70055' evaluation complete — flags: [DEMOGRAPHIC_DRIFT_DETECTED]
+Jun 10, 2026 6:22:43 PM com.loc.atlas.pipeline.IngestionOrchestrator processBatch
+INFO: [Orchestrator] Batch ingestion complete — 11 records processed.
+Jun 10, 2026 6:22:43 PM com.loc.atlas.AtlasEHRApplication main
+INFO: [Atlas-EHR] Simulation session ended normally.
+
+──────────────────────────────────────────────────────────────────────
+  ◆  FINALIZED PATIENT SNAPSHOT SUMMARY
+──────────────────────────────────────────────────────────────────────
+  Total records processed : 11
+  Clean (no flags)        : 7
+  Flagged                 : 4  (audit=2, drift=1)
+
+  ─── Record 1/11 ─────────────────────────────────────────────
+  ┌─ Patient       : US-PAT-00412  [US]
+  │  Drug          : Capecitabine
+  │  Dosage        : 1250.0 mg
+  │  EGFR Status   : Negative
+  │  OCR Confidence: 0.97
+  └─ Flags         : NONE
+
+  ─── Record 2/11 ─────────────────────────────────────────────
+  ┌─ Patient       : UK-PAT-00887  [UK]
+  │  Drug          : Capecitabine
+  │  Dosage        : 825.0 mg
+  │  EGFR Status   : Negative
+  │  OCR Confidence: 0.91
+  └─ Flags         : NONE
+
+  ─── Record 3/11 ─────────────────────────────────────────────
+  ┌─ Patient       : JP-PAT-20031  [JP]
+  │  Drug          : Capecitabine (RxNorm ID: 173562)
+  │  Dosage        : 500.0 mg
+  │  EGFR Status   : Positive
+  │  OCR Confidence: 0.94
+  └─ Flags         : NONE
+
+  ─── Record 4/11 ─────────────────────────────────────────────
+  ┌─ Patient       : JP-PAT-20089  [JP]
+  │  Drug          : Capecitabine (RxNorm ID: 173562)
+  │  Dosage        : 500.0 mg
+  │  EGFR Status   : Positive
+  │  OCR Confidence: 0.62
+  └─ Flags         : LOW_OCR_CONFIDENCE|REQUIRES_HUMAN_AUDIT
+
+  ─── Record 5/11 ─────────────────────────────────────────────
+  ┌─ Patient       : US-PAT-00553  [US]
+  │  Drug          : Erlotinib
+  │  Dosage        : 150.0 mg
+  │  EGFR Status   : Unknown
+  │  OCR Confidence: 0.88
+  └─ Flags         : BIOMARKER_MISSING
+
+  ─── Record 6/11 ─────────────────────────────────────────────
+  ┌─ Patient       : JP-PAT-20114  [JP]
+  │  Drug          : Gefitinib (RxNorm ID: 210557)
+  │  Dosage        : 250.0 mg
+  │  EGFR Status   : Positive
+  │  OCR Confidence: 0.96
+  └─ Flags         : NONE
+
+  ─── Record 7/11 ─────────────────────────────────────────────
+  ┌─ Patient       : KR-PAT-50023  [KR]
+  │  Drug          : Nivolumab
+  │  Dosage        : 240.0 mg
+  │  EGFR Status   : Positive
+  │  OCR Confidence: 0.93
+  └─ Flags         : NONE
+
+  ─── Record 8/11 ─────────────────────────────────────────────
+  ┌─ Patient       : US-PAT-00731  [US]
+  │  Drug          : Pembrolizumab
+  │  Dosage        : 200.0 mg
+  │  EGFR Status   : Positive
+  │  OCR Confidence: 0.81
+  └─ Flags         : NONE
+
+  ─── Record 9/11 ─────────────────────────────────────────────
+  ┌─ Patient       : JP-PAT-20201  [JP]
+  │  Drug          : Trastuzumab (RxNorm ID: 224914)
+  │  Dosage        : 600.0 mg
+  │  EGFR Status   : Negative
+  │  OCR Confidence: 0.85
+  └─ Flags         : NONE
+
+  ─── Record 10/11 ─────────────────────────────────────────────
+  ┌─ Patient       : UK-PAT-01102  [UK]
+  │  Drug          : Bev4cizum4b
+  │  Dosage        : 4.0 mg
+  │  EGFR Status   : Negative
+  │  OCR Confidence: 0.58
+  └─ Flags         : LOW_OCR_CONFIDENCE|REQUIRES_HUMAN_AUDIT
+
+  ─── Record 11/11 ─────────────────────────────────────────────
+  ┌─ Patient       : CN-PAT-70055  [CN]
+  │  Drug          : Osimertinib
+  │  Dosage        : 80.0 mg
+  │  EGFR Status   : Positive
+  │  OCR Confidence: 0.95
+  └─ Flags         : DEMOGRAPHIC_DRIFT_DETECTED
+
+
+──────────────────────────────────────────────────────────────────────
+  ◆  CLASSIFICATION FLAG LEGEND
+──────────────────────────────────────────────────────────────────────
+  REQUIRES_HUMAN_AUDIT     — OCR confidence below safety threshold (0.80).
+                             Record must NOT be used in automated workflows.
+  LOW_OCR_CONFIDENCE       — Supplemental low-confidence tag (accompanies HUMAN_AUDIT).
+  DEMOGRAPHIC_DRIFT_DETECTED — Incoming record's regional EGFR profile deviates
+                             significantly from the Western population baseline.
+                             Informational — record is still usable; research team
+                             should examine the full regional cohort.
+  BIOMARKER_MISSING        — EGFR biomarker not present in the source document.
+                             Pending lab correlation required.
+  PIPELINE_ERROR           — Unhandled runtime error during processing.
+                             Investigate logs and resubmit.
+
+──────────────────────────────────────────────────────────────────────
+  ◆  SESSION COMPLETE
+──────────────────────────────────────────────────────────────────────
+  Atlas-EHR v1.0.0  |  2026-06-10 18:22:43 JST
+  All records processed. Exiting.
+══════════════════════════════════════════════════════════════════════
